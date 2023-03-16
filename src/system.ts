@@ -16,4 +16,4 @@ export const message = `- 由 [OpenAI API (gpt-3.5-turbo)](https://platform.open
 
 export type Setting = typeof setting
 
-export const resetContinuousDialogue = false
+export const resetContinuousDialogue = true
