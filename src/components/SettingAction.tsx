@@ -42,7 +42,7 @@ export default function SettingAction(props: {
             }}
           />
         </SettingItem> */}
-        <SettingItem icon="i-carbon:user-online" label="系统角色指令">
+        <SettingItem icon="i-carbon:user-online" label="系统人设">
           <input
             type="text"
             value={props.setting().systemRule}
