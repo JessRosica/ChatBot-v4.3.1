@@ -43,5 +43,5 @@ export default defineConfig({
     solidJs()
   ],
   output: "server",
-  adapter: deno()
+  adapter: vercel()
 })
