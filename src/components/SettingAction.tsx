@@ -66,8 +66,8 @@ export default function SettingAction(props: {
               }}
             >
               <option value="gpt-3.5-turbo">gpt-3.5-turbo(4k)</option>
-              <option value="gpt-4">gpt-4(8k)</option>
-              <option value="gpt-4-32k">gpt-4(32k)</option>
+              {/* <option value="gpt-4">gpt-4(8k)</option>
+              <option value="gpt-4-32k">gpt-4(32k)</option> */}
             </select>
           </SettingItem>
           <SettingItem icon="i-carbon:user-online" label="系统角色指令">
