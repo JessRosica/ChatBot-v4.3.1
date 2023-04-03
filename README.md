@@ -4,15 +4,6 @@
 ![](assets/preview-dark.png#gh-dark-mode-only)
 
 > 本项目基于 [chatgpt-demo](https://github.com/ddiu8081/chatgpt-demo) 开发。
-
-在线预览:
-
-1. [chatsverse.xyz](https://www.chatsverse.xyz)，由 [@Airyland](https://m.okjike.com/users/C6C8DE3A-E89D-4978-9E7D-B2E167D835A9) 免费提供。
-2. ~~[aitoolgpt.com](https://www.aitoolgpt.com)，由 [@AUDI_GUZZ](https://m.okjike.com/users/4af3cfb4-1291-4a8b-b210-f515c86934a9) 免费提供~~。（2022.03.22 壮烈牺牲，提醒大家不要过度分享自己的站点出去，指不定 ChatGPT 说出什么违禁词出来）。
-3. [vercel.app](https://vercel-chatgpt-github.vercel.app) 被墙。
-
-API Key 由我自己免费提供，请不要滥用，不提供长期服务，请自行部署。默认 key 不支持 `gpt-4`。演示站点密码为 `ourongxing`，每次刷新会关闭 `连续对话`。
-
 ## 使用方法
 
 - 设置
@@ -41,25 +32,6 @@ API Key 由我自己免费提供，请不要滥用，不提供长期服务，请
 - 点击顶部标题滚动到顶部，点击输入框滚动到底部。
 - 发送 sk- 开头的 key，可以直接查询余额。可以换行查询多个。也可以发送 `查询填写的 Key 的余额` 来直接查询你填的 key 的余额，这个 Prompt 预设第一个就是，直接用。作为站长，你可以通过设置环境变量来定时查询所有内置 key 的余额，并发送到微信上。
 - url 里使用 `url?q=你好啊` 这种方式可以打开网页直接回答 `你好啊`，当作搜索引擎使用。
-
-## 部署一个你自己的 ChatGPT 网站（免费）
-
-[![](assets/powered-by-vercel.svg)](http://vercel.com/?utm_source=busiyi&utm_campaign=oss)
-
-如果你只需要部署一个你自己用的网站，而不需要定制，那么你完全不需要在本地跑起来，你可以直接点击下面的按钮，然后按照提示操作，然后在 Vercel 中填入环境变量即可。vercel.app 域名已经被墙，但 vercel 本身没有被墙，所以你绑定自己的域名就可以了。如果广泛分享，域名有被墙的风险。
-
-[![Deploy with Vercel](https://vercel.com/button?utm_source=busiyi&utm_campaign=oss)](https://vercel.com/new/clone?utm_source=busiyi&utm_campaign=oss&repository-url=https://github.com/ourongxing/chatgpt-vercel&env=OPENAI_API_KEY)
-
-不过上面这种方式不容易更新，最好还是先 fork 本仓库，然后在 [Vercel](https://vercel.com/new?utm_source=busiyi&utm_campaign=oss) 中导入你自己的仓库，之后要更新就在 Github 里点击 `Sync fork` 就可以同步更新了。
-
-如果你需要部署给更多人用，需要修改一些代码，那么你可能需要将上面创建的你自己的仓库 `git clone` 到本地。改完了 `git commit & push` 即可重新部署，vscode 上点几下就可以了。也可以用 vercel 的 cli，`vercel deploy --prod`。
-
-如果你需要在本地开发和调试，有点麻烦：
-
-1. 升级到 `node18`，要用到原生的 `fetch` 和 `readableStream`。
-2. API 被墙了，自己想办法开代理，不然要报错。可以设置 OpenAI 的代理 API，也可以直接 `vercel deploy` 部署到 vercel 开发环境上调试。
-3. `pnpm i` 安装依赖。
-4. `pnpm dev` 启动项目。
 
 #### 更多部署方案
 
