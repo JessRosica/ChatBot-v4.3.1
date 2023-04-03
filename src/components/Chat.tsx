@@ -489,6 +489,20 @@ export default function (props: {
               </div>
             </div>
           </Show>
+          <p mt-8 text-xs op-30>
+            <span pr-1>Made by</span>
+            <a b-slate-link href="https://mmsl" target="_blank">
+              MMsl
+            </a>
+            <span px-1>|</span>
+            <a
+              b-slate-link
+              href="https://github.moeyy.cn/donate.html"
+              target="_blank"
+            >
+              Donate{" "}
+            </a>
+          </p>
         </div>
       </div>
     </div>
