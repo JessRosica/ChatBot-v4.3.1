@@ -4,39 +4,24 @@ import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
 
-<header class="sticky top-0 z-99 px-4em">
-  <div class="w-100px h-100px logo">
+<header class="sticky top-0 z-99 px-4em" style="max-width: 1200px; margin: 0 auto;">
+  <div class="w-150px h-150px logo">
     <Logo />
   </div>
   <div class="flex justify-between items-center py-3">
     <div
-      class="flex items-center mt-3 pb-3 text-3xl title cursor-pointer"
+      class="flex items-center mt-3 pb-3 text-4xl title cursor-pointer"
       onclick="scrollToTop()"
+      style="margin-top: 1.5rem; margin-bottom: 1.5rem;"
     >
       <span
         class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-2"
         >ChatGPT</span
       >
-      <!-- <span class="ml-1 font-extrabold text-slate-7 dark:text-slate"
-        >Vercel</span
-      >
-      <a
-        class="ml-2 <sm:hidden"
-        href="https://github.com/ourongxing/chatgpt-vercel"
-      >
-        <img
-          alt="GitHub forks badge"
-          src="https://img.shields.io/github/stars/ourongxing/chatgpt-vercel?logo=github"
-        />
-      </a>
-      <a class="ml-2" href="https://github.com/ourongxing/chatgpt-vercel/fork">
-        <img
-          alt="GitHub forks badge"
-          src="https://img.shields.io/github/forks/ourongxing/chatgpt-vercel?logo=github"
-        />
-      </a> -->
     </div>
-    <ThemeToggle />
+    <div style="margin-right: 2rem;">
+      <ThemeToggle />
+    </div>
   </div>
 </header>
 
