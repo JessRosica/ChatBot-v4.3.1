@@ -83,7 +83,7 @@ export default function SettingAction(props: {
               }}
             />
           </SettingItem>
-          <SettingItem icon="i-carbon:data-enrichment" label="思维发散程度">
+          <SettingItem icon="i-carbon:data-enrichment" label="说胡话发瘟犯病程度">
             <input
               type="range"
               min={0}
