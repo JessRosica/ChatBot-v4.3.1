@@ -4,62 +4,84 @@ import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
 
-<header class="sticky top-0 z-99 px-2em bg-white dark:bg-gray-8">
-  <div class="max-w-screen-lg mx-auto flex justify-between items-center py-4">
-    <div class="flex items-center">
-      <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
-        <img src="https://via.placeholder.com/150" alt="Logo" class="w-full h-full object-cover" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: sans-serif;
+        transform: scale(0.8);
+        transform-origin: top;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        transition: transform 1s ease-in-out;
+        transform: translateY(-100px);
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+      .title span {
+        font-weight: 800;
+        background: linear-gradient(to right, #f6e05e, #fc8181);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-right: 0.5rem;
+      }
+      #themeToggle {
+        border: 0;
+        opacity: 1;
+      }
+      #message-container {
+        opacity: 1;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
       </div>
-      <h1 class="text-2xl font-bold ml-2 text-gray-9 dark:text-white">
-        ChatGPT
-      </h1>
+      <div class="title" onclick="scrollToTop()">
+        <span>ChatGPT</span>
+      </div>
+      <div id="themeToggle">
+        <button>Toggle Theme</button>
+      </div>
+    </header>
+    <div id="message-container">
+      <!-- Messages go here -->
     </div>
-    <ThemeToggle />
-  </div>
-</header>
-
-<script is:inline>
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
-  }
-</script>
-
-<style is:inline>
-  .after .title,
-  .after #themeToggle,
-  .after .logo,
-  .after #message-container {
-    transition-property: transform, opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-  }
-
-  .before .logo {
-    transform: translate3D(25px, 150px, 0) scale(2);
-  }
-
-  .before #themeToggle {
-    transform: translate3D(0, 200px, 0) rotate(540deg);
-  }
-
-  .before .title,
-  .before #message-container {
-    transform: translate3D(0, 200px, 0);
-  }
-
-  .before #themeToggle,
-  .before #message-container {
-    opacity: 0;
-  }
-
-  #themeToggle {
-    border: 0;
-    opacity: 1;
-  }
-  .after #message-container {
-    opacity: 1;
-  }
-</style>
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    </script>
+  </body>
+</html>
