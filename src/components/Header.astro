@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
 
-<header class="sticky top--20px z-99 px-2em">
+<header class="sticky top--100px z-99 px-2em">
   <div class="w-100px h-100px logo">
     <Logo />
   </div>
@@ -83,5 +83,35 @@ export const prerender = true
   }
   .after #message-container {
     opacity: 1;
+  }
+
+  /* 新增样式 */
+  header {
+    max-width: 100%;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    margin-left: 1em;
+  }
+
+  .logo {
+    margin-right: 1em;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  #themeToggle {
+    margin-left: auto;
+  }
+
+  body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
   }
 </style>
