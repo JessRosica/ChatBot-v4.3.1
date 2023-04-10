@@ -4,19 +4,17 @@ import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
 
-<header class="sticky top--100px z-99 px-2em" style="display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 50px;">
-  <div class="w-100px h-100px logo" style="height: 60px; width: 60px;">
-    <Logo />
-  </div>
-  <div class="flex justify-between items-center py-1">
-    <div
-      class="flex items-center mt-2 pb-2 text-2xl title cursor-pointer"
-      onclick="scrollToTop()"
-      style="font-size: 24px; font-weight: 700; cursor: pointer;"
-    >
-      <span class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1">ChatGPT</span>
+<header class="sticky top-0 z-99 px-2em bg-white dark:bg-gray-8">
+  <div class="max-w-screen-lg mx-auto flex justify-between items-center py-4">
+    <div class="flex items-center">
+      <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
+        <img src="https://via.placeholder.com/150" alt="Logo" class="w-full h-full object-cover" />
+      </div>
+      <h1 class="text-2xl font-bold ml-2 text-gray-9 dark:text-white">
+        ChatGPT
+      </h1>
     </div>
-    <ThemeToggle style="margin-left: 40px;" />
+    <ThemeToggle />
   </div>
 </header>
 
