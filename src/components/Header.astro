@@ -5,7 +5,7 @@ export const prerender = true
 ---
 
 <header class="sticky top--100px z-99 px-2em">
-  <div class="w-100px h-100px logo">
+  <div class="w-50px h-50px logo">
     <Logo />
   </div>
   <div class="flex justify-between items-center py-1">
@@ -83,35 +83,5 @@ export const prerender = true
   }
   .after #message-container {
     opacity: 1;
-  }
-
-  /* 新增样式 */
-  header {
-    max-width: 100%;
-    padding: 1em;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .title {
-    margin-left: 1em;
-  }
-
-  .logo {
-    margin-right: 1em;
-  }
-
-  .flex {
-    flex-wrap: wrap;
-  }
-
-  #themeToggle {
-    margin-left: auto;
-  }
-
-  body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
   }
 </style>
